@@ -29,6 +29,7 @@ function AppContent() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/donate" element={<Donate />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </main>
       <Footer />
@@ -40,10 +41,7 @@ export function App() {
   return (
     <SiteProvider>
       <Router>
-        <Routes>
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/*" element={<AppContent />} />
-        </Routes>
+        <AppContent />
       </Router>
     </SiteProvider>
   );
